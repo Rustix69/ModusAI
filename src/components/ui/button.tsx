@@ -9,25 +9,20 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-black text-white hover:bg-zinc-900 hover:opacity-90",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-zinc-700 text-white bg-transparent hover:bg-zinc-800 hover:text-white",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        // NotifyHub custom variants
-        cta: "bg-notifyhub-cta text-white hover:bg-notifyhub-primary shadow-md hover:shadow-lg transition-all duration-200",
-        outlineGlow: "border border-notifyhub-primary/40 text-white hover:bg-notifyhub-primary/10 hover:border-notifyhub-primary shadow-[0_0_10px_rgba(0,255,171,0.1)] hover:shadow-[0_0_15px_rgba(0,255,171,0.3)]",
-        dark: "bg-zinc-800 text-white hover:bg-zinc-700 border border-zinc-700",
+          "bg-zinc-800 text-white hover:bg-zinc-700",
+        ghost: "hover:bg-zinc-800 hover:text-white",
+        link: "text-white underline-offset-4 hover:underline",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
-        xl: "h-12 rounded-md px-10 text-base",
         icon: "h-10 w-10",
       },
     },

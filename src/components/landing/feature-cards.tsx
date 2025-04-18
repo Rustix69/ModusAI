@@ -48,7 +48,7 @@ const FeatureCards = () => {
               </div>
             </div>
             
-            <Button variant="dark" className="w-full sm:w-auto">
+            <Button variant="default" className="w-full sm:w-auto bg-[#0e5e3d] border-[#1c8e61]">
               Try For Free <ChevronRight size={16} />
             </Button>
           </div>
@@ -90,7 +90,7 @@ const FeatureCards = () => {
               </div>
             </div>
             
-            <Button variant="dark" className="w-full sm:w-auto">
+            <Button variant="default" className="w-full sm:w-auto bg-[#0e5e3d] border-[#1c8e61]">
               Try For Free <ChevronRight size={16} />
             </Button>
           </div>

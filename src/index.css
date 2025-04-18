@@ -1,7 +1,8 @@
+@import './styles/fonts.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -97,7 +98,7 @@
   }
 
   body {
-    @apply bg-notifyhub-background text-notifyhub-text-body font-inter;
+    @apply bg-notifyhub-background text-notifyhub-text-body font-satoshi;
   }
 }
 
@@ -163,9 +164,41 @@
 
 @keyframes twinkle {
   0%, 100% {
-    opacity: 0.3;
+    opacity: 0;
+    transform: scale(0.5);
   }
   50% {
-    opacity: 0.5;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes border-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes border-train {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
