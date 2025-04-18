@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { WorldMap } from '@/components/ui/world-map';
 
 const Integrations = () => {
   return (
@@ -25,17 +26,44 @@ const Integrations = () => {
         <p className="text-lg text-center text-notifyhub-text-body mb-12 max-w-xl">
           Modus AI connects with your core financial systems to unify fraud signals across banking, brokerage, and payment data.
         </p>
+
+        {/* World Map with Financial Centers */}
+        <div className="w-full max-w-4xl mx-auto mb-16">
+          <WorldMap
+            lineColor="#2BAF74"
+            dots={[
+              {
+                start: { lat: 40.7128, lng: -74.0060 }, // New York
+                end: { lat: 51.5074, lng: -0.1278 }, // London
+              },
+              {
+                start: { lat: 51.5074, lng: -0.1278 }, // London
+                end: { lat: 35.6762, lng: 139.6503 }, // Tokyo
+              },
+              {
+                start: { lat: 1.3521, lng: 103.8198 }, // Singapore
+                end: { lat: 40.7128, lng: -74.0060 }, // New York
+              },
+              {
+                start: { lat: 22.3964, lng: 114.1095 }, // Hong Kong
+                end: { lat: 51.5074, lng: -0.1278 }, // London
+              },
+              {
+                start: { lat: 25.2048, lng: 55.2708 }, // Dubai
+                end: { lat: 1.3521, lng: 103.8198 }, // Singapore
+              },
+            ]}
+          />
+        </div>
         
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-16 w-full max-w-4xl mx-auto">
           {/* Integration icons with radial connectors */}
           {[1, 2, 3, 4, 5, 6].map((i) => (
             <div key={i} className="flex flex-col items-center">
               <div className="h-16 w-16 bg-zinc-800 rounded-lg flex items-center justify-center border border-zinc-700 hover:border-notifyhub-primary/50 transition-colors relative group">
-                {/* Different logos for each financial institution */}
                 <div className="text-xl font-bold text-notifyhub-text-body group-hover:text-notifyhub-primary transition-colors">
                   {['CH', 'HS', 'FD', 'RV', 'IB', 'PL'][i-1]}
                 </div>
-                {/* Dashed connector line with same style as image */}
                 <div className="absolute top-full h-8 border-l border-dashed border-zinc-700 group-hover:border-notifyhub-primary/50 transition-colors"></div>
               </div>
               <div className="mt-10 text-center">
