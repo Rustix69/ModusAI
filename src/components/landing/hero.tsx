@@ -2,14 +2,18 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Calendar } from "lucide-react";
+import DashboardMockup from "@/components/ui/dashboard-mockup";
 
 const Hero = () => {
   return (
-    <section className="w-full section-padding relative overflow-hidden">
+    <section className="w-full min-h-screen section-padding relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(43,175,116,0.15)_0%,_transparent_40%)] opacity-50" />
       <div className="absolute h-40 w-40 rounded-full bg-notifyhub-primary/20 blur-[100px] -top-10 -left-10" />
       <div className="absolute h-60 w-60 rounded-full bg-notifyhub-primary/10 blur-[120px] -bottom-20 -right-20" />
+      
+      {/* Stars/Dots Animation Background */}
+      <div className="absolute inset-0 bg-[url('/stars.svg')] opacity-30 animate-twinkle" />
       
       <div className="container mx-auto flex flex-col items-center text-center z-10 relative container-padding">
         <div className="animate-fade-in-up mb-6 px-4 py-2 bg-zinc-800/50 rounded-full border border-zinc-700">
@@ -31,6 +35,14 @@ const Hero = () => {
           <Button variant="dark" size="xl">
             Request a Demo <Calendar size={18} />
           </Button>
+        </div>
+
+        {/* Dashboard Preview */}
+        <div className="relative w-full max-w-[1200px] mt-16 animate-fade-in-up [animation-delay:400ms]">
+          <div className="absolute inset-0 bg-gradient-to-t from-notifyhub-background via-transparent to-transparent z-20 pointer-events-none h-[120%]" />
+          <div className="transform perspective-1200 rotate-x-12 hover:rotate-x-8 transition-transform duration-700">
+            <DashboardMockup />
+          </div>
         </div>
       </div>
     </section>
