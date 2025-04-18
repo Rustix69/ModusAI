@@ -9,7 +9,7 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between container-padding">
         <div className="flex items-center">
           <h2 className="text-2xl font-bold bg-gradient-to-r from-white to-notifyhub-text-body bg-clip-text text-transparent">
-            NotifyHub
+            Modus AI
           </h2>
         </div>
         

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
@@ -8,7 +7,7 @@ const FeatureCards = () => {
     <section className="w-full section-padding">
       <div className="container mx-auto container-padding">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* User Preferences Card */}
+          {/* Fraud Pattern Intelligence Card */}
           <div className="feature-card">
             <div className="mb-4 h-10 w-10 bg-notifyhub-primary/20 rounded-md flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-notifyhub-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -18,9 +17,9 @@ const FeatureCards = () => {
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-notifyhub-text-heading mb-3">User Preferences</h3>
+            <h3 className="text-2xl font-bold text-notifyhub-text-heading mb-3">Fraud Pattern Intelligence</h3>
             <p className="text-notifyhub-text-body mb-6">
-              Give recipients control over their notification experience with granular subscription settings. Respect user choices across all channels.
+              Quickly identify fraud behavior across accounts using advanced graph-based AI models.
             </p>
             
             <div className="mb-6 p-4 rounded-lg bg-zinc-800/50 border border-zinc-700">
@@ -54,7 +53,7 @@ const FeatureCards = () => {
             </Button>
           </div>
           
-          {/* Secure Token Card */}
+          {/* Tokenized Security Card */}
           <div className="feature-card">
             <div className="mb-4 h-10 w-10 bg-notifyhub-primary/20 rounded-md flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-notifyhub-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -62,9 +61,9 @@ const FeatureCards = () => {
                 <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-notifyhub-text-heading mb-3">Secure Token & Digest Delivery</h3>
+            <h3 className="text-2xl font-bold text-notifyhub-text-heading mb-3">Tokenized Security Layers</h3>
             <p className="text-notifyhub-text-body mb-6">
-              Industry-leading security for sensitive notifications. Configure daily or weekly digests to reduce notification fatigue.
+              Enable secure digital authentication with digestible reports and bundled updates sent via email or SMS.
             </p>
             
             <div className="mb-6 p-4 rounded-lg bg-zinc-800/50 border border-zinc-700 overflow-hidden">

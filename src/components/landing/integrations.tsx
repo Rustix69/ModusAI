@@ -19,11 +19,11 @@ const Integrations = () => {
         </div>
         
         <h2 className="text-3xl md:text-4xl font-bold text-center text-notifyhub-text-heading mb-6">
-          Seamless Integrations with Your Favorite Tools
+          Integrates with Your Favorite Financial Tools
         </h2>
         
         <p className="text-lg text-center text-notifyhub-text-body mb-12 max-w-xl">
-          Connect with over 200+ popular business tools to automate your notification workflow
+          Modus AI connects with core banking software, CRMs, payment processors, and compliance platforms to deliver unified fraud insights.
         </p>
         
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-16 w-full max-w-4xl mx-auto">

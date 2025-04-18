@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer = () => {
@@ -21,9 +20,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
           {/* Logo and Tagline */}
           <div className="md:col-span-2">
-            <h2 className="text-2xl font-bold text-white mb-3">NotifyHub</h2>
+            <h2 className="text-2xl font-bold text-white mb-3">Modus AI</h2>
             <p className="text-sm text-zinc-400 mb-6 max-w-xs">
-              The centralized notification platform for modern development teams.
+              Protecting financial institutions and individuals with AI-powered fraud detection.
             </p>
           </div>
           
@@ -70,7 +69,7 @@ const Footer = () => {
         
         <div className="border-t border-zinc-800 pt-6 flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-zinc-500">
-            © {new Date().getFullYear()} NotifyHub. All rights reserved.
+            © {new Date().getFullYear()} Modus AI. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-sm text-zinc-500 hover:text-white transition-colors">Terms</a>
