@@ -19,11 +19,11 @@ const Integrations = () => {
         </div>
         
         <h2 className="text-3xl md:text-4xl font-bold text-center text-notifyhub-text-heading mb-6">
-          Integrates with Your Favorite Financial Tools
+          Seamless Integrations with Banks & Trading Platforms
         </h2>
         
         <p className="text-lg text-center text-notifyhub-text-body mb-12 max-w-xl">
-          Modus AI connects with core banking software, CRMs, payment processors, and compliance platforms to deliver unified fraud insights.
+          Modus AI connects with your core financial systems to unify fraud signals across banking, brokerage, and payment data.
         </p>
         
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-16 w-full max-w-4xl mx-auto">
@@ -31,16 +31,16 @@ const Integrations = () => {
           {[1, 2, 3, 4, 5, 6].map((i) => (
             <div key={i} className="flex flex-col items-center">
               <div className="h-16 w-16 bg-zinc-800 rounded-lg flex items-center justify-center border border-zinc-700 hover:border-notifyhub-primary/50 transition-colors relative group">
-                {/* Different icon for each integration placeholder */}
+                {/* Different logos for each financial institution */}
                 <div className="text-xl font-bold text-notifyhub-text-body group-hover:text-notifyhub-primary transition-colors">
-                  {['M', 'D', 'G', 'Z', 'N', 'S'][i-1]}
+                  {['CH', 'HS', 'FD', 'RV', 'IB', 'PL'][i-1]}
                 </div>
-                {/* Dashed connector line - could be animated */}
+                {/* Dashed connector line with same style as image */}
                 <div className="absolute top-full h-8 border-l border-dashed border-zinc-700 group-hover:border-notifyhub-primary/50 transition-colors"></div>
               </div>
               <div className="mt-10 text-center">
                 <h4 className="font-medium text-notifyhub-text-heading">
-                  {['Mailchimp', 'Dropbox', 'GitHub', 'Zapier', 'Notion', 'Stripe'][i-1]}
+                  {['Chase Bank', 'HSBC', 'Fidelity', 'Revolut', 'Interactive Brokers', 'Plaid'][i-1]}
                 </h4>
                 <p className="text-xs text-notifyhub-text-body mt-1">Integration</p>
               </div>
