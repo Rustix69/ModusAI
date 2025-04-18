@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { motion } from 'framer-motion';
 import Header from '@/components/landing/header';
 import Hero from '@/components/landing/hero';
 import FeatureHighlight from '@/components/landing/feature-highlight';
@@ -11,7 +11,12 @@ import Footer from '@/components/landing/footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-notifyhub-background flex flex-col">
+    <motion.div 
+      className="min-h-screen bg-notifyhub-background flex flex-col"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <Header />
       <main>
         <Hero />
@@ -22,7 +27,7 @@ const Index = () => {
         <Pricing />
       </main>
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

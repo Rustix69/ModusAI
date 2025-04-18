@@ -1,26 +1,84 @@
-
 import React from 'react';
 import { WorldMap } from '@/components/ui/world-map';
+import { motion } from 'framer-motion';
 
 const Integrations = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10
+      }
+    }
+  };
+
   return (
-    <section className="w-full py-20 relative overflow-hidden">
+    <motion.section 
+      className="w-full py-20 relative overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={containerVariants}
+    >
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(43,175,116,0.08)_0%,_transparent_70%)]" />
-      <div className="absolute h-80 w-80 rounded-full bg-notifyhub-primary/5 blur-[150px] top-0 left-1/4 transform -translate-x-1/2" />
+      <motion.div 
+        className="absolute h-80 w-80 rounded-full bg-notifyhub-primary/5 blur-[150px] top-0 left-1/4 transform -translate-x-1/2"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.5, 0.8, 0.5]
+        }}
+        transition={{
+          repeat: Infinity,
+          duration: 8,
+          ease: "easeInOut"
+        }}
+      />
       
       <div className="container mx-auto flex flex-col items-center container-padding">
         
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-notifyhub-text-heading mb-6">
+        <motion.h2 
+          className="text-3xl md:text-4xl font-bold text-center text-notifyhub-text-heading mb-6"
+          variants={itemVariants}
+        >
           Seamless Integrations with Banks & Trading Platforms
-        </h2>
+        </motion.h2>
         
-        <p className="text-lg text-center text-notifyhub-text-body mb-12 max-w-xl">
+        <motion.p 
+          className="text-lg text-center text-notifyhub-text-body mb-12 max-w-xl"
+          variants={itemVariants}
+        >
           Modus AI connects with your core financial systems to unify fraud signals across banking, brokerage, and payment data.
-        </p>
+        </motion.p>
 
         {/* World Map with Financial Centers */}
-        <div className="w-full mx-auto mb-16">
+        <motion.div 
+          className="w-full mx-auto mb-16"
+          variants={itemVariants}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ 
+            type: "spring",
+            stiffness: 100,
+            damping: 15,
+            delay: 0.3
+          }}
+        >
           <WorldMap
             lineColor="#2BAF74"
             dots={[
@@ -71,9 +129,9 @@ const Integrations = () => {
               
             ]}
           />
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
